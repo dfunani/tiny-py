@@ -1,0 +1,21 @@
+{% extends 'layout.html' %} {% block title %}Tiny-Py{% endblock %} {% block
+content %}
+<div class="container">
+  <h1>Your Generated URL</h1>
+  <div id="generated-url">{{url}}</div>
+  <button id="copy-button">Copy URL</button>
+</div>
+<script>
+  const generatedUrlElement = document.getElementById("generated-url");
+  const copyButton = document.getElementById("copy-button");
+
+  copyButton.addEventListener("click", () => {
+    navigator.clipboard.writeText(generatedUrlElement.textContent);
+    alert("URL copied to clipboard!");
+  });
+  generatedUrlElement.addEventListener("click", (url) => {
+            // Redirect to the URL using JavaScript
+            window.open(url.target.innerText, '_blank');
+        })
+</script>
+{% endblock %}

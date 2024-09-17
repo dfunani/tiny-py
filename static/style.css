@@ -1,0 +1,29 @@
+.container {
+    text-align: center;
+    margin: 20px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+#generated-url{
+    font-size: xx-large;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
