@@ -9,6 +9,11 @@
             "url": "https://flask.palletsprojects.com/en/2.3.x/quickstart/#routing",
             "base": "http://localhost:5001/",
             "key": "hza76mo"
+        },
+        "3": {
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent",
+            "base": "http://127.0.0.1:5001/",
+            "key": "7pzeoq6"
         }
     }
 }

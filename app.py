@@ -1,14 +1,11 @@
 """"Flask App: REST Endpoints"""
 
 import logging
-from flask import Flask, Response, request, redirect, render_template
-
+from flask import Response, request, redirect, render_template
+from . import app
 from .models import URLManager, URLManagerError
 
 logger = logging.getLogger(__name__)
-
-app = Flask(__name__)
-
 
 @app.route("/", methods=["GET"])
 def index():
