@@ -3,7 +3,7 @@
 import logging
 from flask import Flask, Response, request, redirect, render_template
 
-from models import URLManager, URLManagerError
+from .models import URLManager, URLManagerError
 
 logger = logging.getLogger(__name__)
 
@@ -19,8 +19,8 @@ def index():
 
 @app.route("/", methods=["POST"])
 def encode():
-    """"Shortens the Provided URL and Persists the URL."""
-    
+    """ "Shortens the Provided URL and Persists the URL."""
+
     json_request = False
     if request.is_json:
         body = request.get_json(silent=True)
@@ -29,10 +29,10 @@ def encode():
         body = request.form
     else:
         return Response("Invalid Request Body: Content-Type.", status=400)
-    
+
     if "url" not in body:
         return Response("Invalid Request Body: No URL Field.", status=400)
-    
+
     try:
         url = body["url"]
         response = URLManager(request.url_root).encode(url)
@@ -43,15 +43,16 @@ def encode():
         return Response(str(error), status=500)
 
 
-@app.route(f"/<string:key>")
+@app.route("/<string:key>")
 def decode(key):
     """Returns the URL linked to a Short Key."""
-    
+
     try:
         url = URLManager(request.root_url).decode(key)
     except URLManagerError as error:
         return str(error)
     return redirect(url, code=302)
+
 
 if __name__ == "__main__":
     app.run()

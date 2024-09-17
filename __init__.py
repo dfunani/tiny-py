@@ -1,3 +1,6 @@
+"""App Ingress Point."""
+
+
 import logging
 
 logging.basicConfig(

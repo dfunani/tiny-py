@@ -55,20 +55,28 @@ python app.py # flask run --reload ALTERNATIVE
     }
     ```
 
-Redirect:
+2. Redirect:
 
-Method: GET
-Endpoint: /redirect/<short_url>
-Example: https://tiny-py.com/abc
-Response: Redirects to the original URL.
-Caveats
-URL Storage: The shortened URLs and their corresponding original URLs are stored in a TinyDB database (urls.json).
-Data Format: The data can be submitted either as JSON or form data.
-Error Handling: The application should handle errors gracefully, such as invalid URLs or missing data.
-Customization
-URL Shortening Algorithm: You can customize the algorithm used to generate short URLs.
-Database: Consider using a more scalable database like MongoDB or PostgreSQL for larger applications.
-Error Handling: Implement more robust error handling and messaging.
-Features: Add additional features like custom short codes, analytics, or user accounts.
-Contributing
-Contributions are welcome! Please feel free to submit pull requests or issues. -->
+ - Method: GET
+ - Endpoint: `/<string:short_url>`
+ - Example: https://tiny-py.com/abc
+ - Response: Redirects to the original URL.
+
+## Caveats
+**URL Storage**: The shortened URLs and their corresponding original URLs are stored in a TinyDB database (urls.json).
+
+**Data Format**: The data can be submitted either as JSON or form data.
+
+**Error Handling**: The application should handle errors gracefully, such as invalid URLs or missing data.
+
+## Customization
+**URL Shortening Algorithm**: You can customize the algorithm used to generate short URLs.
+
+**Database**: Consider using a more scalable database like MongoDB or PostgreSQL for larger applications.
+
+**Error Handling**: Implement more robust error handling and messaging.
+
+**Features**: Add additional features like custom short codes, analytics, or user accounts.
+
+## Contributing
+Contributions are welcome! Please feel free to submit pull requests or issues.

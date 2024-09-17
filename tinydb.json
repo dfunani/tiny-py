@@ -1,9 +1,0 @@
-{
-    "_default": {
-        "1": {
-            "url": "https://flask.palletsprojects.com/en/2.3.x/quickstart/#routing",
-            "base": "http://localhost:5000/",
-            "key": "abcdefg"
-        }
-    }
-}
